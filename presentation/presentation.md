@@ -1,7 +1,7 @@
 Developing Data Products: Course Project
 ========================================================
 author: Serhiy Shekhovtsov
-date: December 25, 2016
+date: January 02, 2017
 autosize: true
 
 Introduction
@@ -14,8 +14,7 @@ It's a reproducible pitch of my Shiny application ["Exploring cars dataset with 
 
 ui.R
 ========================================================
-<br>
-## This file controls appearance of the application
+### This file controls appearance of the application
 <br>
 I have the following code to show two inputs:
 
@@ -34,10 +33,9 @@ plotOutput("distPlot")
 ```
 server.R
 ========================================================
-<br>
-## This file represents so-called business logic layer of the application
-<br>
-In my case it will render the plot based on options selected by user:
+### This file represents so-called business logic layer of the application
+
+Here is a code to show the plot based on selected options:
 
 ```r
 output$distPlot <- renderPlot({
@@ -45,12 +43,12 @@ output$distPlot <- renderPlot({
   # select column based on input$column from ui.R
   x <- cars[, input$column]
   # generate bins based on input$bins from ui.R
-  bins <- seq(min(x), max(x), length.out = input$bins + 1)
+  bins <- seq(min(x), max(x), length.out=input$bins+1)
 
-  # draw the histogram with the specified number of bins
-  hist(x, breaks = bins, col = 'darkgray', border = 'white', 
-       main = paste("Histogram of cars$", input$column, sep=""),
-       xlab = input$column)
+  # draw the histogram with specified options
+  hist(x, breaks=bins, col='darkgray',
+       main=paste("Histogram of cars$", input$column, sep=""),
+       xlab=input$column)
 })
 ```
 
