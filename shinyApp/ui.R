@@ -42,9 +42,9 @@ shinyUI(navbarPage("Menu",
            mainPanel(
              
              h1("Developing Data Products: Course Project"),
-             p("This is a course project for", strong("Developing Data Products"), "course on ", 
-               a("Coursera", 
-                 href = "https://www.coursera.org"), ". The goal is to build an interactive Shiny application."),
+             p("This is a course project for", strong("Developing Data Products"), "course on ",
+               HTML("<a href=\"https://www.coursera.org\">Coursera</a>."),
+               "The goal is to build an interactive Shiny application"),
              
              h2("How to use the App"),
              p("On the", strong("Exploration"), "tab select the column you want to explore and number of bins for histogram plot"),
@@ -52,10 +52,10 @@ shinyUI(navbarPage("Menu",
              h2("Source code"),
              p("The source code for this application is available ",
                a("here", 
-                 href = "https://github.com"), "."),
+                 href = "https://github.com/Serhiy-Shekhovtsov/data-products")),
              
              h2("Presentation"),
-             p(HTML("Please, <a href=\"https://github.com\">click here</a>, to check the presentation for this app"))
+             p(HTML("Please, <a href=\"http://rpubs.com/Serhiy/s239182\">click here</a>, to check the presentation for this app"))
            )
   )
 ))
