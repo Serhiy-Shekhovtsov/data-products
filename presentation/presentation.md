@@ -4,13 +4,8 @@ author: Serhiy Shekhovtsov
 date: January 02, 2017
 autosize: true
 
-Introduction
-========================================================
-<br>
 
 This presentation is a part of course project for **Developing Data Products** course on [Coursera](https://www.coursera.org)
-
-It's a reproducible pitch of my Shiny application ["Exploring cars dataset with Shiny"](https://serhii.shinyapps.io/developing_data_products_course_project/)
 
 ui.R
 ========================================================
@@ -51,6 +46,20 @@ output$distPlot <- renderPlot({
        xlab=input$column)
 })
 ```
+
+Reproducible Example
+========================================================
+
+```r
+  x <- cars[, "speed"]
+  bins <- seq(min(x), max(x), length.out=10)
+  
+  hist(x, breaks=bins, xlab="speed",
+       main="Histogram of cars$speed")
+```
+
+<img src="presentation-figure/unnamed-chunk-4-1.png" title="plot of chunk unnamed-chunk-4" alt="plot of chunk unnamed-chunk-4" style="display: block; margin: auto;" />
+
 
 Shiny App and the Source Code
 ========================================================

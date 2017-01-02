@@ -46,6 +46,9 @@ shinyUI(navbarPage("Menu",
                a("Coursera", 
                  href = "https://www.coursera.org"), ". The goal is to build an interactive Shiny application."),
              
+             h2("How to use the App"),
+             p("On the", strong("Exploration"), "tab select the column you want to explore and number of bins for histogram plot"),
+             
              h2("Source code"),
              p("The source code for this application is available ",
                a("here", 
