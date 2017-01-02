@@ -1,6 +1,7 @@
 Developing Data Products: Course Project
 ========================================================
 author: Serhiy Shekhovtsov
+
 date: January 02, 2016
 
 Introduction
